@@ -4,10 +4,10 @@ export const INPUT_MESSAGE = {
 }
 
 export const ERROR_MESSAGE = {
-    'INVALID_INPUT' : 'No query input',
-    'INVALID_VALUE' : 'No values',
-    'INVALID_NUMBER' : 'Non-number exists',
-    'INVALID_POSITIVE' : 'Non-positive value exists'
+    'INVALID_INPUT' : '[ERROR] No query input',
+    'INVALID_VALUE' : '[ERROR] No values',
+    'INVALID_NUMBER' : '[ERROR] Non-number exists',
+    'INVALID_POSITIVE' : '[ERROR] Non-positive value exists'
 }
 
 export const SEPERATOR = {
