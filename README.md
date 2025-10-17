@@ -1,6 +1,6 @@
 # 프리코스 1주차: 문자열 덧셈 계산기
 ## 구현 기능 정리
-![Week 1 flowchart](images/flowchart_week1.png)
+![Week 1 flowchart](images/flowchart_1w.png)
 
 - [x] 1. **입력 받기** by `Console.readLineAsync(query)`
 <br/>
