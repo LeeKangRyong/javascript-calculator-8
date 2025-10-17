@@ -11,7 +11,7 @@ export function isCustom(query) {
 }
 
 export function isNumber(arr) {
-    return arr.every(v => typeof v === 'number');
+    return arr.every(v => typeof (+v) === 'number');
 }
 
 export function isPositive(arr) {
