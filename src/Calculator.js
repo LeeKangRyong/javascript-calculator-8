@@ -63,6 +63,11 @@ class Calculator {
             throw new Error(`${ERROR_MESSAGE.INVALID_POSITIVE}`);
         }
     }
+
+    addArray(arr) {
+        const sum = arr.reduce((acc, num) => acc + +num, 0);
+        Console.print(`${INPUT_MESSAGE.RESULT} ${sum}`);
+    }
 }
 
 export default Calculator;

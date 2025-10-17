@@ -15,7 +15,8 @@ class App {
       calculator.validateArray(arr);
 
       // Task 5, 6. 값 더해주기 && 결과 출력
-
+      calculator.addArray(arr);
+      
     } catch (e) {
       calculator.printError(e.message);
     }
