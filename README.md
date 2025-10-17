@@ -2,13 +2,13 @@
 ## 구현 기능 정리
 ![Week 1 flowchart](images/flowchart_week1.png)
 
-- [ ] 1. **입력 받기** by `Console.readLineAsync(query)`
+- [x] 1. **입력 받기** by `Console.readLineAsync(query)`
 <br/>
 
-- [ ] 2. **입력 값 검증**
+- [x] 2. **입력 값 검증**
 
-    - [ ] query가 null / undefined면? => `[Error] No query Input` 
-    - [ ] query가 빈 문자열이면? => `sum = 0;` -> 출력
+    - [x] query가 null / undefined면? => `[Error] No query Input` 
+    - [x] query가 빈 문자열이면? => `sum = 0;` -> 출력
 <br/>
 
 - [ ] 3. **구분자 설정 및 구분하기**  
