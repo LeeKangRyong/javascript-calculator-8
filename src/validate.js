@@ -1,3 +1,5 @@
+import { SEPERATOR } from "./constants.js";
+
 export function isInvalid(query) {
     return query === 'null' || query === 'undefined';
 }
@@ -7,7 +9,7 @@ export function isEmpty(query) {
 }
 
 export function isCustom(query) {
-    return query.startsWith('//');
+    return query.startsWith(SEPERATOR.CUSTOM_START);
 }
 
 export function isNumber(arr) {
