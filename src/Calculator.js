@@ -8,12 +8,13 @@ import {
 } from "./validate.js";
 import {
     INPUT_MESSAGE,
-    ERROR_MESSAGE
+    ERROR_MESSAGE,
+    SEPERATOR
 } from "./constants.js";
 
 class Calculator {
     constructor() {}
-    
+
     async printError(message) {
         Console.print(`[ERROR] ${message}`);
     }
@@ -27,9 +28,25 @@ class Calculator {
 
         if (isEmpty(inputMessage)) {
             Console.print(`${INPUT_MESSAGE.RESULT} 0`);
+            return 0;
         }
 
         return inputMessage;
+    }
+
+    seperatorSplit(query) {
+        let seperator = '';
+
+        if (isCustom(query)) {
+            seperator = query.slice(2, query.indexOf(SEPERATOR.CUSTOM_END))
+            query = query.slice(query.indexOf(SEPERATOR.CUSTOM_END)+2);
+        } else {
+            seperator = `[${SEPERATOR.DEFAULT_COMMA}${SEPERATOR.DEFAULT_COLON}]`
+        }
+
+        const arr = query.split(new RegExp(seperator));
+
+        return arr;
     }
 }
 
