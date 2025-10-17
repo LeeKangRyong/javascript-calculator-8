@@ -24,17 +24,17 @@
         - [x] `arr`에 넣기
 <br/>
 
-- [ ] 4. **배열 검증**
+- [x] 4. **배열 검증**
    
-    - [ ] `arr`이 빈 배열이면? => `[Error] No values`
-    - [ ] `arr`에 숫자 아닌 값이 있으면? => `[Error] Non-number value exists`
-    - [ ] `arr`에 양수가 아닌 값이 있으면? => `[Error] Non-positive value exists`
+    - [x] `arr`이 빈 배열이면? => `[Error] No values`
+    - [x] `arr`에 숫자 아닌 값이 있으면? => `[Error] Non-number value exists`
+    - [x] `arr`에 양수가 아닌 값이 있으면? => `[Error] Non-positive value exists`
 <br/>
 
-- [ ] 5. **값 더해주기** (`reduce`)
+- [x] 5. **값 더해주기** (`reduce`)
 <br/>
 
-- [ ] 6. **결과(에러) 출력** by `Console.print(message)`
+- [x] 6. **결과(에러) 출력** by `Console.print(message)`
 ---
 
 ## 테스트
