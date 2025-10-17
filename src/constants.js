@@ -15,5 +15,5 @@ export const SEPERATOR = {
     'DEFAULT_COLON' : ':',
 
     'CUSTOM_START' : '//',
-    'CUSTOM_END' : '\n'
+    'CUSTOM_END' : '\\n'
 }
