@@ -58,7 +58,37 @@ npm run start
 
 ---
 
+## JS style guide
+- **상수**
+    - **snake_case** 사용   ex) `IS_CUSTOM`
+
+- **식별자**
+
+    - `var` 사용 X. `const/let` 사용
+    - `let`은 재할당 필요할 때 사용
+
+- **문자열**
+
+    - `''` 사용
+    - 100자가 넘지 않는 문자열은 줄바꿈 하지 않기
+    - 문자열 결합 시 `${}`로 감싼 template literal 사용
+
+- **배열**
+
+    - 생성 시 literal 사용 ex) `const arr = [];`
+    - 추가 시 `push` 사용
+    - 복사 시 `[...]` 스프레드 연산자 사용
+
+- **함수**
+
+    - 소스의 변수명, 클래스명에는 **영문** 이외 사용 X
+    - **named function** 사용 ex) `const short = function asd() { ... }`
+    - rest 문법 사용 시 argument 대신 `...` 사용 ex) `function concatenateAll(...args) { ... }`
+
+---
+
 ## 참고 자료
 - [mission-utils 라이브러리 분석 결과](https://quirky-streetcar-a17.notion.site/mission-utils-28c523184d3c80d8904fe0870e5e4181?pvs=74)  
 - [Commit convention](https://gist.github.com/stephenparish/9941e89d80e2bc58a153)  
 - [JavaScript Style Guide](https://github.com/woowacourse/woowacourse-docs/tree/main/styleguide/javascript)  
+- [Airbnb JS Style Guide](https://github.com/airbnb/javascript?tab=readme-ov-file#functions)
