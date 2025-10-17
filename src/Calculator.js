@@ -16,10 +16,6 @@ import {
 class Calculator {
     constructor() {}
 
-    async printError(message) {
-        Console.print(`[ERROR] ${message}`);
-    }
-
     async readQuery() {
         const inputMessage = await Console.readLineAsync(INPUT_MESSAGE.INPUT);
 
