@@ -9,13 +9,12 @@ class App {
       if (query === 0)  return query;
 
       // Task 3. 구분자 설정 및 구분
-      const arr = await calculator.seperatorSplit(query);
-      
+      const arr = calculator.seperatorSplit(query);
+
       // Task 4. arr 검증
+      calculator.validateArray(arr);
 
-      // Task 5. 값 더해주기
-
-      // Task 6. 결과 출력
+      // Task 5, 6. 값 더해주기 && 결과 출력
 
     } catch (e) {
       calculator.printError(e.message);

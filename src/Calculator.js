@@ -3,6 +3,7 @@ import {
     isInvalid,
     isEmpty,
     isCustom,
+    isEmptyArray,
     isNumber,
     isPositive
 } from "./validate.js";
@@ -47,6 +48,20 @@ class Calculator {
         const arr = query.split(new RegExp(seperator));
 
         return arr;
+    }
+
+    validateArray(arr) {
+
+        if (isEmptyArray(arr)) {
+            throw new Error(`${ERROR_MESSAGE.INVALID_VALUE}`);
+        }
+        if (!isNumber(arr)) {
+            throw new Error(`${ERROR_MESSAGE.INVALID_NUMBER}`);
+        }
+
+        if (!isPositive(arr)) {
+            throw new Error(`${ERROR_MESSAGE.INVALID_POSITIVE}`);
+        }
     }
 }
 
