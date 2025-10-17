@@ -1,4 +1,5 @@
 import { SEPERATOR } from "./constants.js";
+const trimmed = v => v.trim();
 
 export function isInvalid(query) {
     return query === 'null' || query === 'undefined';
@@ -12,10 +13,14 @@ export function isCustom(query) {
     return query.startsWith(SEPERATOR.CUSTOM_START);
 }
 
+export function isEmptyArray(arr) {
+    return arr.length === 1 && arr[0] === '' ;
+}
+
 export function isNumber(arr) {
-    return arr.every(v => typeof (+v) === 'number');
+    return arr.every(v => trimmed(v) !== '' && !isNaN(+trimmed(v)));
 }
 
 export function isPositive(arr) {
-    return arr.every(v => +v > 0);
+    return arr.every(v => +trimmed(v) > 0);
 }
