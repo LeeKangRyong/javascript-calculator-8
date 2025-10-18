@@ -90,3 +90,4 @@ npm run start
 - [Commit convention](https://gist.github.com/stephenparish/9941e89d80e2bc58a153)  
 - [JavaScript Style Guide](https://github.com/woowacourse/woowacourse-docs/tree/main/styleguide/javascript)  
 - [Airbnb JS Style Guide](https://github.com/airbnb/javascript?tab=readme-ov-file#functions)
+- [Software Development Principle](https://hbase.tistory.com/468)
