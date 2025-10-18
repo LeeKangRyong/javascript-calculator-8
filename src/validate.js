@@ -1,10 +1,6 @@
 import { SEPERATOR } from "./constants.js";
 const trimmed = v => v.trim();
 
-export function isInvalid(query) {
-    return query === 'null' || query === 'undefined';
-}
-
 export function isEmpty(query) {
     return query.length === 0;
 }
