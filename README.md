@@ -7,7 +7,6 @@
 
 - [x] 2. **입력 값 검증**
 
-    - [x] query가 null / undefined면? => `[Error] No query Input` 
     - [x] query가 빈 문자열이면? => `sum = 0;` -> 출력
 <br/>
 
