@@ -36,6 +36,18 @@
 - [x] 6. **결과(에러) 출력** by `Console.print(message)`
 ---
 
+## 아키텍처 - MVC
+```
+src
+├── Calculator.js          # 계산기 (Controller)
+├── stringCalculator.js    # 계산 로직 (Model)
+├── views.js              # 입출력(에러 포함) (View)
+├── validate.js           # 검증 로직
+└── constants.js          # 상수 관리
+```
+
+---
+
 ## 테스트
 ```
 npm install
@@ -90,4 +102,5 @@ npm run start
 - [Commit convention](https://gist.github.com/stephenparish/9941e89d80e2bc58a153)  
 - [JavaScript Style Guide](https://github.com/woowacourse/woowacourse-docs/tree/main/styleguide/javascript)  
 - [Airbnb JS Style Guide](https://github.com/airbnb/javascript?tab=readme-ov-file#functions)
+- [WoowaCourse Clean Code](https://github.com/woowacourse/woowacourse-docs/blob/main/cleancode/pr_checklist.md)
 - [Software Development Principle](https://hbase.tistory.com/468)
