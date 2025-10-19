@@ -1,22 +1,25 @@
-import { SEPERATOR } from "./constants.js";
+import { SEPARATOR } from "./constants.js";
 const trimmed = v => v.trim();
 
-export function isEmpty(query) {
+
+const isEmpty = (query) => {
     return query.length === 0;
 }
 
-export function isCustom(query) {
-    return query.startsWith(SEPERATOR.CUSTOM_START);
+const isCustom = (query) => {
+    return query.startsWith(SEPARATOR.CUSTOM_START);
 }
 
-export function isEmptyArray(arr) {
-    return arr.length === 1 && arr[0] === '' ;
+const isEmptyArray = (arr) => {
+    return arr.length === 1 && arr[0] === '';
 }
 
-export function isNumber(arr) {
+const isNumber = (arr) => {
     return arr.every(v => trimmed(v) !== '' && !isNaN(+trimmed(v)));
 }
 
-export function isPositive(arr) {
+const isPositive = (arr) => {
     return arr.every(v => +trimmed(v) > 0);
 }
+
+export { isEmpty, isCustom, isEmptyArray, isNumber, isPositive };

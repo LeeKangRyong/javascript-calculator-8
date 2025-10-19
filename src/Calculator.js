@@ -1,64 +1,21 @@
-import { Console } from "@woowacourse/mission-utils"
-import {
-    isEmpty,
-    isCustom,
-    isEmptyArray,
-    isNumber,
-    isPositive
-} from "./validate.js";
-import {
-    INPUT_MESSAGE,
-    ERROR_MESSAGE,
-    SEPERATOR
-} from "./constants.js";
+import { Input, Output } from "./views.js";
+import { StringCalculator } from "./stringCalculator.js";
 
 class Calculator {
     constructor() {}
 
-    async readQuery() {
-        const inputMessage = await Console.readLineAsync(INPUT_MESSAGE.INPUT);
+    async run() {
+        try {
+            const query = await Input.readQuery();
+            const sum = StringCalculator.calculate(query);
 
-        if (isEmpty(inputMessage)) {
-            Console.print(`${INPUT_MESSAGE.RESULT} 0`);
-            return 0;
+            Output.printResult(sum);
+        } catch (e) {
+            throw Output.printError(e);
         }
-
-        return inputMessage;
-    }
-
-    seperatorSplit(query) {
-        let seperator = '';
-
-        if (isCustom(query)) {
-            seperator = query.slice(2, query.indexOf(SEPERATOR.CUSTOM_END))
-            query = query.slice(query.indexOf(SEPERATOR.CUSTOM_END)+2);
-        } else {
-            seperator = `[${SEPERATOR.DEFAULT_COMMA}${SEPERATOR.DEFAULT_COLON}]`
-        }
-
-        const arr = query.split(new RegExp(seperator));
-
-        return arr;
-    }
-
-    validateArray(arr) {
-
-        if (isEmptyArray(arr)) {
-            throw new Error(`${ERROR_MESSAGE.INVALID_VALUE}`);
-        }
-        if (!isNumber(arr)) {
-            throw new Error(`${ERROR_MESSAGE.INVALID_NUMBER}`);
-        }
-
-        if (!isPositive(arr)) {
-            throw new Error(`${ERROR_MESSAGE.INVALID_POSITIVE}`);
-        }
-    }
-
-    addArray(arr) {
-        const sum = arr.reduce((acc, num) => acc + +num, 0);
-        Console.print(`${INPUT_MESSAGE.RESULT} ${sum}`);
+        
     }
 }
 
 export default Calculator;
+
