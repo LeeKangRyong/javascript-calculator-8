@@ -8,22 +8,22 @@ const StringCalculator = {
             return 0;
         }
 
-        const seperatedQuery = this.seperatorSplit(query);        
-        this.validateArray(seperatedQuery);
-        return this.addArray(seperatedQuery);
+        const separatedQuery = this.separatorSplit(query);        
+        this.validateArray(separatedQuery);
+        return this.addArray(separatedQuery);
     },
 
-    seperatorSplit(query) {
-        let seperator = '';
+    separatorSplit(query) {
+        let separator = '';
 
         if (isCustom(query)) {
-            seperator = query.slice(SEPARATOR.CUSTOM_START_LENGTH, query.indexOf(SEPARATOR.CUSTOM_END));
+            separator = query.slice(SEPARATOR.CUSTOM_START_LENGTH, query.indexOf(SEPARATOR.CUSTOM_END));
             query = query.slice(query.indexOf(SEPARATOR.CUSTOM_END)+SEPARATOR.CUSTOM_END_LENGTH);
         } else {
-            seperator = `[${SEPARATOR.DEFAULT_COMMA}${SEPARATOR.DEFAULT_COLON}]`;
+            separator = `[${SEPARATOR.DEFAULT_COMMA}${SEPARATOR.DEFAULT_COLON}]`;
         }
 
-        const arr = query.split(new RegExp(seperator));
+        const arr = query.split(new RegExp(separator));
 
         return arr;
     },
